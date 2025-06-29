@@ -10,6 +10,7 @@ def sequentialSearch(data: list, desire_number: int):
 
     # Enquanto o índice for menor que o índice do último elemento da lista.
     while data_index < len(data):
+        steps += 1
         # Se o elemento na iteração for igual ao número a ser buscado,
         # contabilizar um passo na quantia de vezes que o algoritmo
         # foi executado e retornar uma tupla, onde o primeiro elemento é o
@@ -19,11 +20,9 @@ def sequentialSearch(data: list, desire_number: int):
         # passar para o próximo elemento e contabilizar o número de execuções
         # do algoritmo.
         if data[data_index] == desire_number:
-            steps += 1
             return (data_index, steps)
         else:
             data_index += 1
-            steps += 1
     # Caso não encontrar nada retorna -1 com o número de vezes que o algoritmo
     # foi executado.
     return (-1, steps)

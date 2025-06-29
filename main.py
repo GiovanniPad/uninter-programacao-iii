@@ -6,7 +6,7 @@ from algorithms.sequential_search import sequentialSearch
 
 # Lista com 10 números inteiros aleatórios de 0 a 9.
 data = random.sample(range(10), 10)
-
+data = [5, 7, 8, 14, 24, 29, 56, 77, 78, 88]
 # Busca sequencial
 
 # Imprimindo a lista desordenada para visualização.
@@ -44,7 +44,7 @@ number = int(input("Digite o valor que deseja buscar: "))
 # índice de busca, a lista e o número a ser buscado.
 # `index` representa o índice do número desejado na lista e `steps` indica a quantia
 # de vezes que o algoritmo foi executado.
-index, steps = binarySearch(0, len(data_sorted), data_sorted, number)
+index, steps = binarySearch(0, len(data_sorted) - 1, data_sorted, number)
 
 # Verificando se o número desejado foi encontrado ou não.
 if index == -1:

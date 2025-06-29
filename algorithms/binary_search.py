@@ -3,14 +3,15 @@
 # `start` é o índice inicial e `end` é o índice final.
 # `data` é a lista de números inteiros ordenados.
 # `desire_number` é o número que é para ser buscado.
-def binarySearch(start: int, end: int, data: list, desire_number: int):
+def binarySearch(start: int, end: int, data: list, desired_number: int):
     # Variável para contar o número de vezes que o algoritmo foi executado.
     steps = 0
 
     # Enquanto o índice inicial for menor que o índice final o loop executa.
-    # Isso é necessário pois se o índice inicial for maior que o índice final
-    # a lista não poderá ser percorrida corretamente.
+    # Isso é garante que os "ponteiros" não vão ter se cruzado e a busca vai
+    # sempre iniciar de um índice menor que o final.
     while start <= end:
+        steps += 1
         # Encontrando o índice do elemento central.
         middle = (start + end) // 2
 
@@ -25,20 +26,15 @@ def binarySearch(start: int, end: int, data: list, desire_number: int):
         # Caso contrário, retorna uma tupla contendo o índice do número
         # encontrado e o número de vezes que o algoritmo foi executado. Neste
         # caso, o número buscado foi encontrado.
-
-        # Em todos os casos o número de execuções do algoritmo é incrementado.
-        
+       
         # Ao realizar essas operações, o número de elementos a ser buscado é
         # cortado ao meio toda vez, descartando muitos elementos e melhorando
         # a eficiência da busca.
-        if desire_number > data[middle]:
-            steps += 1
+        if desired_number > data[middle]:
             start = middle + 1
-        elif desire_number < data[middle]:
-            steps += 1
+        elif desired_number < data[middle]:
             end = middle - 1
         else:
-            steps += 1
             return (middle, steps)
 
     # Caso não encontrar o número retorna -1 com o número de execuções do algoritmo.

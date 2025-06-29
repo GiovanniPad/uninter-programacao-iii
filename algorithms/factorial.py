@@ -10,3 +10,4 @@ def factorial(n: int):
 
 result = factorial(5)
 print(result)
+
