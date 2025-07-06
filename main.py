@@ -24,7 +24,9 @@ index, steps = sequentialSearch(data, number)
 if index == -1:
     print(f"Valor não encontrado. Algoritmo executado {steps} vez(es).")
 else:
-    print(f"Valor encontrado na posição {index} da lista. O algoritmo foi executado {steps} vez(es).")
+    print(
+        f"Valor encontrado na posição {index} da lista. O algoritmo foi executado {steps} vez(es)."
+    )
 
 
 # Busca binária
@@ -50,4 +52,6 @@ index, steps = binarySearch(0, len(data_sorted) - 1, data_sorted, number)
 if index == -1:
     print(f"Valor não encontrado. Algoritmo executado {steps} vez(es).")
 else:
-    print(f"Valor encontrado na posição {index} da lista. O algoritmo foi executado {steps} vez(es).")
+    print(
+        f"Valor encontrado na posição {index} da lista. O algoritmo foi executado {steps} vez(es)."
+    )

@@ -26,7 +26,7 @@ def binarySearch(start: int, end: int, data: list, desired_number: int):
         # Caso contrário, retorna uma tupla contendo o índice do número
         # encontrado e o número de vezes que o algoritmo foi executado. Neste
         # caso, o número buscado foi encontrado.
-       
+
         # Ao realizar essas operações, o número de elementos a ser buscado é
         # cortado ao meio toda vez, descartando muitos elementos e melhorando
         # a eficiência da busca.

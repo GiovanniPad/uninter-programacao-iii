@@ -32,10 +32,10 @@ for i in dadosA:
 
 print("------------------------")
 
-dadosA = [0,1,2,3,4]
+dadosA = [0, 1, 2, 3, 4]
 
 # Progressão geométrica - PG O(2ⁿ)
 for i in dadosA:
-    dadosB = list(range(0, (i*i), 1))
+    dadosB = list(range(0, (i * i), 1))
     for j in dadosB:
         print(f"i:{i} - j:{j}")

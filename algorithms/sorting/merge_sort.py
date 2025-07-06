@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def merge_sort(data):
     if len(data) > 1:
         middle = len(data) // 2
@@ -18,7 +19,7 @@ def merge_sort(data):
                 data[k] = right[j]
                 j += 1
             k += 1
-        
+
         while len(left) > i:
             data[k] = left[i]
             i += 1

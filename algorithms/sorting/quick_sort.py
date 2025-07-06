@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def quick_sort(data, start, end):
     if start < end:
         partition_position = partition(data, start, end)
@@ -32,13 +33,17 @@ def partition(data, start, end):
 
 
 def quick_sort_alternative(data):
-	if len(data) < 2:
-		return data
-	else:
-		pivot = data[0]
-		smallers = [i for i in data[1:] if i <= pivot]
-		greatests = [i for i in data[1:] if i > pivot]
-		return quick_sort_alternative(smallers) + [pivot] + quick_sort_alternative(greatests)
+    if len(data) < 2:
+        return data
+    else:
+        pivot = data[0]
+        smallers = [i for i in data[1:] if i <= pivot]
+        greatests = [i for i in data[1:] if i > pivot]
+        return (
+            quick_sort_alternative(smallers)
+            + [pivot]
+            + quick_sort_alternative(greatests)
+        )
 
 
 data = [31, 19, 30, 64, 1, 0, 74, 15, 99, 7]

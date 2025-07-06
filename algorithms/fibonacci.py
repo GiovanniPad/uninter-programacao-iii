@@ -3,7 +3,7 @@ def fibonacci(n: int):
         return 1
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
-    
+
 
 result = fibonacci(6)
 print(result)

@@ -1,6 +1,6 @@
 # Algoritmo que contém apenas um laço único, sendo assim é O(n).
 def exercicio1(dados):
-    for i in range (0, len(dados) / 2, 1):
+    for i in range(0, len(dados) / 2, 1):
         dados[i] = i * 2
 
 
@@ -26,9 +26,9 @@ def exercicio3(dados):
 # Neste caso, há três laços aninhados, sendo assim a complexidade é O(n²).
 # Pois, por mais que há três laços, o último laço interno possui um número
 # fixo de execuções (9 milhões), não dependendo do tamanho do conjunto
-# de dados. 
+# de dados.
 def exercicio4(dados):
-	for i in range(0, len(dados), 1):
-		for j in range(0, len(dados), 1):
-			for k in range(0, 9000000, 1):
-				dados[i] = dados[j] + 1
+    for i in range(0, len(dados), 1):
+        for j in range(0, len(dados), 1):
+            for k in range(0, 9000000, 1):
+                dados[i] = dados[j] + 1
